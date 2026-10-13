@@ -1,0 +1,9 @@
+{
+  "security": {
+    "environmentVariableRedaction": {
+      "allowed": [
+        "KLISTEN_FAILBOX_API_KEY"
+      ]
+    }
+  }
+}

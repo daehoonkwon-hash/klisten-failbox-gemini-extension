@@ -1,0 +1,29 @@
+{
+  "name": "klisten-failbox",
+  "version": "0.1.0",
+  "description": "Simulate retries and failures using private synthetic balance sessions.",
+  "mcpServers": {
+    "failbox": {
+      "httpUrl": "https://api.klisten.co.kr/mcp/failbox",
+      "headers": {
+        "Authorization": "Bearer ${KLISTEN_FAILBOX_API_KEY}"
+      },
+      "timeout": 20000,
+      "includeTools": [
+        "failbox_create_session",
+        "failbox_step",
+        "failbox_read",
+        "failbox_replay",
+        "failbox_delete_session"
+      ]
+    }
+  },
+  "settings": [
+    {
+      "name": "FailBox API key",
+      "description": "Your own dedicated least-privilege key; never enter it in chat.",
+      "envVar": "KLISTEN_FAILBOX_API_KEY",
+      "sensitive": true
+    }
+  ]
+}
